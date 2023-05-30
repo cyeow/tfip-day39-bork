@@ -1,0 +1,7 @@
+<form [formGroup]="form" (submit)="submit()">
+    <textarea formControlName="text" cols="30" rows="10" placeholder="say something"></textarea>
+    <br>
+    <input type="file" #imgFile/>
+    <br><br>
+    <button type="submit" [disabled]="form.invalid">Shout it</button>
+</form>

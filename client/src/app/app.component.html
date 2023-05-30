@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-icon>pets</mat-icon>
+        &nbsp;
+        <span>Bork</span>
+        &nbsp;
+        <button type="button" mat-flat-button color="primary" [routerLink]="['/']">All Posts</button>
+        &nbsp;
+        <button type="button" mat-flat-button color="primary" [routerLink]="['/post']">New Post</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div class="center-it">
+    <router-outlet></router-outlet>
+</div>

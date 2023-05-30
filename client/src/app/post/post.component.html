@@ -1,0 +1,20 @@
+<mat-card *ngIf="post$ | async as p else noPost" style="margin-bottom: 1vw;">
+    <mat-card-header>{{ p.text }}</mat-card-header>
+    <img mat-card-image src="{{ p.imgUrl }}" alt="">
+    <mat-card-content>{{ p.user }}</mat-card-content>
+    <mat-card-footer>
+        <button type="button" mat-button (click)="upvote()">
+            <span>{{ p.up }} <mat-icon>thumb_up</mat-icon></span>
+        </button>
+        &nbsp; | &nbsp;
+        <button type="button" mat-button (click)="downvote()">
+            <span>{{ p.down }} <mat-icon>thumb_down</mat-icon></span>
+        </button>
+    </mat-card-footer>
+</mat-card>
+
+<ng-template #noPost>
+    <mat-card>
+        loading...
+    </mat-card>   
+</ng-template>

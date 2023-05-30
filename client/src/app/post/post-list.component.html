@@ -1,0 +1,3 @@
+<div *ngIf="postIDs$ | async as posts">
+    <app-post *ngFor="let p of posts" [postId]="p"></app-post>
+</div>
